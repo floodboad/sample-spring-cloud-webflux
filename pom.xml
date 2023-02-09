@@ -14,10 +14,12 @@
 	</parent>
 
 	<properties>
-		<java.version>11</java.version>
+<!--		<java.version>11</java.version>-->
+		<java.version>8</java.version>
 		<sonar.projectKey>piomin_sample-spring-cloud-webflux</sonar.projectKey>
 		<sonar.organization>piomin</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<lombok.version>1.18.26</lombok.version>
 	</properties>
 
 	<modules>
@@ -25,6 +27,7 @@
 		<module>discovery-service</module>
 		<module>gateway-service</module>
 		<module>customer-service</module>
+		<module>mail-service</module>
 	</modules>
 
 	<dependencyManagement>
@@ -33,6 +36,13 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>2021.0.5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

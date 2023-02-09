@@ -1,0 +1,9 @@
+server:
+  port: 3336
+  
+spring:
+  application:
+    name: mail-service
+#  data:
+#    mongodb:
+#      uri: mongodb://192.168.99.100/test
